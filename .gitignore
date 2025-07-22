@@ -24,3 +24,4 @@ buildout.cfg
 **/__pycache__/
 **/*.egg-info/
 .venv/
+**/.venv/
