@@ -1,5 +1,6 @@
-import os
 import json
+import os
+
 import typer
 from github import Github, GithubException
 

@@ -1,14 +1,14 @@
 [project]
-name = "github-issue-lister-mcp"
+name = "github-issue-lister-cli"
 version = "0.1.0"
-description = "A local MCP tool to list GitHub issues."
+description = "A CLI tool to list GitHub issues."
 dependencies = [
-    "PyGithub",
-    "typer[all]",
+    "PyGithub==2.6.1",
+    "typer==0.16.0"
 ]
 
 [project.scripts]
-list-issues-mcp = "mcp:main"
+github-lister = "mcp-typer:main"
 
 [build-system]
 requires = ["setuptools"]
