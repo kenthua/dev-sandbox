@@ -3,8 +3,8 @@ name = "github-issue-lister-mcp"
 version = "0.1.0"
 description = "A local MCP tool to list GitHub issues."
 dependencies = [
-    "PyGithub",
-    "typer[all]",
+    "PyGithub==2.6.1",
+    "fastmcp==2.10.6",
 ]
 
 [project.scripts]
