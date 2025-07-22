@@ -1,0 +1,28 @@
+{
+  "name": "github_issue_lister",
+  "description": "A tool for listing open issues in a GitHub repository.",
+  "tools": [
+    {
+      "command": [
+        "github-issue-lister-mcp"
+      ],
+      "arguments": [
+        {
+          "name": "repo_name",
+          "type": "string",
+          "description": "The name of the repository in the format 'user/repo'.",
+          "required": true,
+          "command_argument": true
+        },
+        {
+          "name": "limit",
+          "type": "integer",
+          "description": "The maximum number of issues to list.",
+          "required": true,
+          "command_argument": true
+        }
+      ],
+      "return_value_description": "A JSON object containing the status of the operation and a list of issue titles. The status can be 'success', 'empty', or 'error'. If the status is 'error', the object will also contain an error message."
+    }
+  ]
+}
