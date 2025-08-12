@@ -40,7 +40,7 @@ def list_issues(repo_name: str, limit: int) -> dict:
     except Exception as e:
         print(f"An unexpected error occurred: {e}")
 
-agent_vllm = LlmAgent(
+github_agent = LlmAgent(
     model=LiteLlm(
         model=model_name_at_endpoint,
         api_base=api_base_url,
@@ -54,3 +54,5 @@ agent_vllm = LlmAgent(
     # ... other agent parameters
     tools=[list_issues]
 )
+
+root_agent = github_agent
