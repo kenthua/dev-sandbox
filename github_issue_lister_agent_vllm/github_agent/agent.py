@@ -4,10 +4,10 @@ from google.adk.agents import LlmAgent
 from google.adk.models.lite_llm import LiteLlm
 
 # Endpoint URL provided by your vLLM deployment
-api_base_url = "http://vllm-gemma-3-1b:8000/v1"
+api_base_url = os.getenv("VLLM_PATH", "http://vllm-gemma-3-1b:8000/v1")
 
 # Model name as recognized by *your* vLLM endpoint configuration
-model_name_at_endpoint = "hosted_vllm/google/gemma-3-1b-it" # Example from vllm_test.py
+model_name_at_endpoint = os.getenv("MODEL_PATH", "hosted_vllm/google/gemma-3-1b-it") # Example from vllm_test.py
 
 def list_issues(repo_name: str, limit: int) -> dict:
 
