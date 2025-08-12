@@ -45,7 +45,7 @@ github_agent = LlmAgent(
         model=model_name_at_endpoint,
         api_base=api_base_url,
         # Pass authentication headers if needed
-        extra_headers=auth_headers
+        #extra_headers=auth_headers
         # Alternatively, if endpoint uses an API key:
         # api_key="YOUR_ENDPOINT_API_KEY"
     ),
